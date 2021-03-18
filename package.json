@@ -1,0 +1,16 @@
+{
+  "name": "006-servidor-rest",
+  "version": "1.0.0",
+  "description": "servidor rest",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jaaziel Figueroa Jeronimo",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  }
+}
