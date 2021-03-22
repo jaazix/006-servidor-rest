@@ -1,5 +1,6 @@
 require('./config/config');
 const express = require('express');
+const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const app = express();
 
@@ -61,6 +62,16 @@ app.delete('/usuario/:id', function(req, res) {
         mensaje: 'usuario eliminado exitosamente',
         id: id
     });
+});
+
+mongoose.connect('mongodb://localhost:27017/bd_cafeteria', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false,
+    useCreateIndex: true
+}, (err, res) => { //sql 3606
+    if (err) throw err;
+    console.log('bd en linea');
 });
 
 app.listen(process.env.PORT, () => {
